@@ -1,0 +1,124 @@
+/* app/dashboard/page.module.css */
+
+.container {
+  max-width: 900px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* --- Balance Card --- */
+.balanceCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.balanceLabel {
+  display: block;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.balanceValue {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* --- Action Buttons --- */
+.actionButtons {
+  display: flex;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.primaryButton,
+.secondaryButton {
+  flex: 1; /* Make buttons share space */
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.primaryButton {
+  background-color: var(--brand-blue);
+  color: #fff;
+}
+.primaryButton:hover {
+  background-color: var(--brand-blue-dark);
+}
+
+.secondaryButton {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.secondaryButton:hover {
+  background-color: #ccc;
+}
+
+
+/* --- Transaction List --- */
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+.txList {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-top: 20px;
+}
+
+.txItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.txItem:last-child {
+  border-bottom: none;
+}
+
+.txDesc {
+  font-weight: 500;
+}
+
+.txAmount {
+  font-weight: 600;
+}
+.positive {
+  color: #28a745;
+}
+.negative {
+  color: #dc3545;
+}

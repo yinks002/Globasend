@@ -1,0 +1,217 @@
+/* app/dashboard/send/page.module.css */
+
+.container {
+  max-width: 550px; /* A nice, focused width for a flow */
+}
+
+.flowBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #111;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* --- THE FIX IS HERE --- */
+:global(label) {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+:global(select) {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  /* Add appearance for cross-browser consistency */
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-13%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013l128%20127.9c3.6%203.6%207.8%205.4%2013%205.4s9.4-1.8%2013-5.4L287%2095.2c3.6-3.6%205.4-7.8%205.4-13%200-5-1.8-9.4-5.4-13z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 14px top 50%;
+  background-size: .65em auto;
+  padding-right: 30px; /* Make space for the arrow */
+}
+/* --- END OF FIX --- */
+
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* --- Amount Input --- */
+.amountInputGroup {
+  margin-bottom: 20px;
+}
+.inputWithCurrency {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.inputWithCurrency:focus-within {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+.inputWithCurrency input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 20px;
+  width: 100%;
+  /* Remove number input spinners */
+  -moz-appearance: textfield;
+}
+.inputWithCurrency input::-webkit-outer-spin-button,
+.inputWithCurrency input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inputWithCurrency span {
+  font-size: 36px;
+  font-weight: 700;
+  color: #aaa;
+  padding-left: 20px;
+}
+.currencyTag {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  background: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+/* --- AI Preview Pane --- */
+.aiPreviewPane {
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.aiBadge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: var(--brand-blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+.previewRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.previewRow span:first-child { color: #777; }
+.previewRow span:last-child { font-weight: 600; color: #333; }
+.previewRowTotal span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* --- Buttons --- */
+.primaryButton,
+.secondaryButton {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+.primaryButton {
+  background-color: var(--brand-blue);
+  color: #fff;
+}
+.primaryButton:hover { background-color: var(--brand-blue-dark); }
+.secondaryButton {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.secondaryButton:hover { background-color: #ccc; }
+
+/* --- Confirmation Screen --- */
+.confirmationBox h3 {
+  font-size: 16px;
+  color: #777;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.confirmValueLarge {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  display: block;
+}
+.confirmText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 20px;
+}
+.guaranteeText {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* --- Success Screen --- */
+.successBox {
+  text-align: center;
+}
+.successIcon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.txId {
+  display: inline-block;
+  background: #f0f0f0;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}

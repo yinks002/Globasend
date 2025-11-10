@@ -1,0 +1,80 @@
+/* app/dashboard/layout.module.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f7f8fa;
+}
+
+/* --- Sidebar Styles --- */
+.sidebar {
+  width: 260px;
+  background-color: #1a1a2e; /* Dark sidebar */
+  color: #e0e0e0;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarLogo {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 40px;
+  padding-left: 10px;
+  color: var(--brand-blue); /* Use our global blue */
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* This pushes the footer down */
+}
+
+.navItem, .navItemActive {
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.navItem a, .navItemActive a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.navItem:hover {
+  background-color: #2a2a4e;
+  color: #fff;
+}
+
+/* This is the "active" state */
+.navItemActive {
+  background-color: var(--brand-blue);
+  color: #fff;
+}
+
+.sidebarFooter {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.sidebarFooter p {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+.sidebarFooter span {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* --- Main Content Area --- */
+.mainContent {
+  flex: 1; /* Takes up the remaining space */
+  padding: 40px 60px;
+  overflow-y: auto; /* Adds scrolling if content is long */
+}

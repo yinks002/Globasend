@@ -1,0 +1,115 @@
+/* This is our custom CSS module: app/page.module.css */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 450px;
+  background-color: #ffffff;
+  padding: 2.5rem; /* 40px */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem; /* 32px */
+}
+
+.title {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+
+.subtitle {
+  font-size: 1rem; /* 16px */
+  color: #666;
+  margin-top: 0.5rem; /* 8px */
+}
+
+/* --- Tabs --- */
+.tabList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.tab {
+  border: none;
+  background: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabActive {
+  background-color: #ffffff;
+  color: var(--brand-blue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Form --- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.formGroup input {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+.submitButton {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--brand-blue);
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem; /* 8px */
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--brand-blue-dark);
+}

@@ -1,0 +1,121 @@
+/* app/dashboard/transactions/page.module.css */
+
+.container {
+  max-width: 900px; /* Wider, to fit the full list */
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* --- Filter Buttons --- */
+.filterContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filterButton {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #555;
+  padding: 8px 16px;
+  border-radius: 20px; /* Pill shape */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #f7f7f7;
+  border-color: #bbb;
+}
+
+.filterActive {
+  background-color: var(--brand-blue);
+  color: #fff;
+  border-color: var(--brand-blue);
+}
+
+/* --- Transaction List --- */
+.txList {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-top: 20px;
+}
+
+.txItem {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.txItem:last-child {
+  border-bottom: none;
+}
+
+.txIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.iconSent {
+  background-color: #fff0f0;
+  color: #dc3545;
+}
+
+.iconReceived {
+  background-color: #f0fff4;
+  color: #28a745;
+}
+
+.txDetails {
+  flex: 1; /* This pushes the amount to the end */
+}
+
+.txDesc {
+  display: block;
+  font-weight: 600;
+  color: #333;
+}
+
+.txDate {
+  display: block;
+  font-size: 0.875rem;
+  color: #777;
+  margin-top: 2px;
+}
+
+.txAmount {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.positive {
+  color: #28a745;
+}
+
+.negative {
+  color: #dc3545;
+}

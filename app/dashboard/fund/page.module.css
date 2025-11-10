@@ -1,0 +1,122 @@
+/* app/dashboard/fund/page.module.css */
+
+.container {
+  max-width: 550px; /* Match the 'send' page for consistency */
+}
+
+.flowBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #111;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* --- Form --- */
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.formGroup input {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+/* --- Option List --- */
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.optionButton {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.optionButton:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+.optionActive {
+  background-color: #f0f7ff; /* Light blue */
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+.optionTitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.optionDesc {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* --- Button --- */
+.primaryButton {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  background-color: var(--brand-blue);
+  color: #fff;
+}
+.primaryButton:hover { 
+  background-color: var(--brand-blue-dark); 
+}
