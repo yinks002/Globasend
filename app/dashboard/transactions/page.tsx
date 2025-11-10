@@ -1,9 +1,8 @@
-// This is a client component to manage the filters
+
 'use client';
 
 import React, { useState } from 'react';
-import styles from './page.module.css'; // We'll create this CSS next
-
+import styles from './page.module.css'; 
 // Mock data for a long list of transactions
 const MOCK_TRANSACTIONS = [
   { id: 1, type: 'sent', desc: 'Sent to Alice O. (Revolut)', amount: '-£20.00', date: 'Oct 26, 2025' },
@@ -17,10 +16,10 @@ const MOCK_TRANSACTIONS = [
 ];
 
 export default function TransactionsPage() {
-  // This state holds the active filter
-  const [filter, setFilter] = useState('all'); // 'all', 'sent', or 'received'
 
-  // This filters the list based on the active state
+  const [filter, setFilter] = useState('all'); 
+
+  
   const filteredTransactions = MOCK_TRANSACTIONS.filter(tx => {
     if (filter === 'all') return true;
     return tx.type === filter;
@@ -53,11 +52,11 @@ export default function TransactionsPage() {
         </button>
       </div>
 
-      {/* --- Full Transactions List --- */}
+     
       <div className={styles.txList}>
         {filteredTransactions.map((tx) => (
           <div className={styles.txItem} key={tx.id}>
-            {/* I'll add a simple icon for visual flair */}
+         
             <div className={`${styles.txIcon} ${tx.type === 'sent' ? styles.iconSent : styles.iconReceived}`}>
               {tx.type === 'sent' ? '↑' : '↓'}
             </div>

@@ -1,19 +1,18 @@
-// This is a client component to manage the 3-step flow
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
-// Mock data for the "AI Preview"
+
 const MOCK_RATE = 1850.75;
-const MOCK_FEE_NGN = 1450.00; // $1.00 @ 1450 NGN/USD
+const MOCK_FEE_NGN = 1450.00; 
 
 export default function SendMoneyPage() {
-  // This state controls which step we're on (1, 2, or 3)
+  
   const [step, setStep] = useState(1);
   
-  // This state holds the data from the form
-  const [amount, setAmount] = useState('20.00'); // Bob sends £20
+  const [amount, setAmount] = useState('20.00'); 
   const [preview, setPreview] = useState({
     rate: '0.00',
     fee: '0.00',
@@ -21,8 +20,7 @@ export default function SendMoneyPage() {
     total: '0.00',
   });
 
-  // This is the "AI-Powered Preview" from your white paper
-  // It re-calculates every time the 'amount' changes
+  
   useEffect(() => {
     const numAmount = parseFloat(amount) || 0;
     const ngnAmount = numAmount * MOCK_RATE;
@@ -34,10 +32,10 @@ export default function SendMoneyPage() {
       ngnAmount: ngnAmount.toLocaleString('en-US', { minimumFractionDigits: 2 }),
       total: total.toLocaleString('en-US', { minimumFractionDigits: 2 }),
     });
-  }, [amount]); // Dependency array: run this code when 'amount' changes
+  }, [amount]); 
 
 
-  // --- Step 1: Enter Amount ---
+  
   const renderStep1 = () => (
     <div className={styles.flowBox}>
       <h1 className={styles.title}>Send Money</h1>
@@ -155,10 +153,9 @@ export default function SendMoneyPage() {
         <button 
           className={styles.primaryButton} 
           onClick={() => {
-            // In a real app, you'd go to /dashboard, but for the prototype,
-            // we'll just reset the flow.
+            
             setStep(1); 
-            // router.push('/dashboard'); // Use this to go back to dashboard
+            
           }}
         >
           Make Another Transfer

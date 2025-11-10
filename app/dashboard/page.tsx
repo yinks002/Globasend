@@ -1,12 +1,12 @@
-// This is the dashboard homepage: app/dashboard/page.tsx
+
 'use client'; 
 
 import React from 'react';
 import styles from './page.module.css'; 
-import { useRouter } from 'next/navigation'; // <-- Make sure this is imported
+import { useRouter } from 'next/navigation'; 
 
 export default function DashboardPage() {
-  const router = useRouter(); // <-- Initialize the router
+  const router = useRouter(); 
 
   // Mock data for Bob
   const mockData = {

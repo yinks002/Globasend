@@ -1,7 +1,7 @@
-// This must be a client component for useState and onClick
+
 'use client';
 
-// Import our custom styles for THIS page
+
 import styles from './page.module.css'; 
 
 import { useRouter } from 'next/navigation';
@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 
 export default function LoginPage() {
   const router = useRouter();
-  // This state controls which tab is active: 'login' or 'signup'
+
   const [activeTab, setActiveTab] = useState('login');
 
   // --- MOCKED FUNCTIONALITY ---
@@ -22,14 +22,13 @@ export default function LoginPage() {
       console.log('Attempting sign up...');
     }
 
-    // We can't use a library toast, so we'll just log
-    // and redirect.
+ 
     alert('Mock Success! Redirecting to dashboard...');
 
-    // Redirect to the dashboard page
+    
     setTimeout(() => {
       router.push('/dashboard');
-    }, 1000); // 1 second delay
+    }, 1000); 
   };
 
   const renderLoginForm = () => (
@@ -79,10 +78,9 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* --- Tab Controls --- */}
         <div className={styles.tabList}>
           <button
-            // Dynamically set the class
+           
             className={`${styles.tab} ${activeTab === 'login' ? styles.tabActive : ''}`}
             onClick={() => setActiveTab('login')}
           >
@@ -96,7 +94,7 @@ export default function LoginPage() {
           </button>
         </div>
 
-        {/* --- Tab Content --- */}
+       
         <div>
           {activeTab === 'login' ? renderLoginForm() : renderSignUpForm()}
         </div>

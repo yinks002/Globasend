@@ -1,4 +1,4 @@
-// This file is a Server Component
+
 import './globals.css';
 import React from 'react';
 

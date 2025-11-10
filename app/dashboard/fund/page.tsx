@@ -1,17 +1,17 @@
-// This is a client component to manage the funding flow
+
 'use client';
 
 import React, { useState } from 'react';
 import styles from './page.module.css'; // We'll create this CSS next
 
 export default function FundAccountPage() {
-  // This state holds the data from the form
-  const [amount, setAmount] = useState('500000'); // Default to 500k from case study
-  const [selectedMethod, setSelectedMethod] = useState('opay'); // 'opay' or 'bank'
+  
+  const [amount, setAmount] = useState('500000'); 
+  const [selectedMethod, setSelectedMethod] = useState('opay'); 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would open a payment gateway or show bank details
+  
     alert(
       `Mock Success!\n\nProceeding to fund ${amount} NGN via ${selectedMethod === 'opay' ? 'OPay/PalmPay' : 'Bank Transfer'}.`
     );
