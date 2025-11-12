@@ -1,7 +1,7 @@
 /* app/dashboard/transactions/page.module.css */
 
 .container {
-  max-width: 900px; /* Wider, to fit the full list */
+  max-width: 900px; 
 }
 
 .title {
@@ -118,4 +118,31 @@
 
 .negative {
   color: #dc3545;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .title {
+    margin-top: 40px; 
+  }
+  .txItem {
+    padding: 15px;
+    flex-wrap: wrap; 
+  }
+  .txIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    margin-right: 12px;
+  }
+  .txDetails {
+    flex-basis: 60%; 
+  }
+  .txDate {
+    font-size: 0.8rem;
+  }
+  .txAmount {
+    font-size: 0.95rem;
+    margin-left: auto; 
+  }
 }

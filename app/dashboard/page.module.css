@@ -122,3 +122,20 @@
 .negative {
   color: #dc3545;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+    margin-top: 40px; 
+  }
+  .balanceCard {
+    padding: 20px;
+  }
+  .balanceValue {
+    font-size: 2.5rem; 
+  }
+  .actionButtons {
+    flex-direction: column; 
+    gap: 15px;
+  }
+}

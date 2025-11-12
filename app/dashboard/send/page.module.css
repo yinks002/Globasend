@@ -215,3 +215,31 @@
   margin-bottom: 20px;
   font-family: 'Courier New', Courier, monospace;
 }
+
+@media (max-width: 768px) {
+  .title {
+    margin-top: 40px; 
+  }
+  .flowBox {
+    padding: 25px 20px;
+  }
+  .inputWithCurrency input {
+    font-size: 2rem;
+    padding: 15px;
+  }
+  .inputWithCurrency span {
+    font-size: 2rem;
+    padding-left: 15px;
+  }
+  .currencyTag {
+    font-size: 0.9rem !important; 
+    padding: 8px 10px;
+    margin-right: 15px;
+  }
+  .confirmationBox h3 {
+    margin-top: 10px;
+  }
+  .confirmValueLarge {
+    font-size: 2.25rem; 
+  }
+}

@@ -120,3 +120,15 @@
 .primaryButton:hover { 
   background-color: var(--brand-blue-dark); 
 }
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .title {
+    margin-top: 40px; 
+  }
+  .flowBox {
+    padding: 25px 20px;
+  }
+  .formGroup input {
+    font-size: 1.25rem;
+  }
+}

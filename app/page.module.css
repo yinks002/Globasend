@@ -113,3 +113,18 @@
 .submitButton:hover {
   background-color: var(--brand-blue-dark);
 }
+
+@media (max-width: 768px) {
+  .loginBox {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1.5rem; /* Less padding on sides */
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 100vh; /* Make it full-height */
+  }
+
+  .container {
+    padding: 0;
+  }
+}
